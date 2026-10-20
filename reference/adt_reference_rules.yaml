@@ -1,0 +1,167 @@
+milestone: CT-001H
+frozen_at: '2026-08-24T21:05:05+08:00'
+active_plan_sha256: ab1b981bcfa2f66c67f57c7ffdd80581e33fe42e470fb9a2dfd8f17f04274d6f
+implementation_status: CONTRACT_ONLY_NO_M6_FITTING
+schema_version: CT001H_ADT_TRUTH_v0.1_FROZEN
+truth_level: LEVEL1_MAJOR_LINEAGE
+primary_labels:
+- T_cell
+- B_cell
+- NK_cell
+- monocyte
+output_statuses:
+- RESOLVED_ADT_LEVEL1
+- AMBIGUOUS_ADT
+- MIXED_ADT
+- LOW_ADT_QUALITY
+- UNRESOLVED_ADT
+- OUTSIDE_PRIMARY_LABEL_SET
+allowed_inputs:
+- ADT_counts
+- antibody_metadata
+- isotype_controls
+- empty_background_ADT_if_present
+- donor_id
+- sample_id
+- hashtag_assignment
+- frozen_rule_tree
+- frozen_cell_ontology_mapping
+forbidden_inputs:
+- RNA_counts
+- RNA_PCA
+- RNA_UMAP
+- RNA_clusters
+- author_labels
+- M1
+- M2
+- M4
+- M5A
+- CellTypist
+- Azimuth
+- SingleR
+- scmap
+- source_paper_multimodal_labels
+normalization_decision:
+  DSB: allowed_only_if_valid_empty_droplets_and_isotype_controls_both_present
+  fallback_and_selected_for_D3_D4: within_sample_CLR
+  posthoc_switching: false
+thresholding:
+  primary_method: two_component_1d_gaussian_mixture_on_ADT_only_per_sample
+  minimum_component_separation_sd: 1.5
+  fallback: prefrozen_marker_specific_quantile_rule
+  manual_adjustment: PROHIBITED
+rule_semantics:
+  minimum_positive_proteins: 2
+  minimum_negative_proteins: 2
+  minimum_top_vs_second_lineage_margin_sd: 0.5
+  single_marker_classification: PROHIBITED
+  forced_classification: PROHIBITED
+lineage_rules:
+  T_cell:
+    positive_aliases:
+    - CD3
+    - CD3E
+    - CD3D
+    - CD5
+    - CD7
+    negative_aliases:
+    - CD19
+    - CD20
+    - CD14
+    - CD56
+  B_cell:
+    positive_aliases:
+    - CD19
+    - CD20
+    - CD22
+    - CD79B
+    negative_aliases:
+    - CD3
+    - CD5
+    - CD14
+    - CD56
+  NK_cell:
+    positive_aliases:
+    - CD56
+    - CD16
+    - CD335
+    - CD7
+    negative_aliases:
+    - CD3
+    - CD19
+    - CD20
+    - CD14
+  monocyte:
+    positive_aliases:
+    - CD14
+    - CD16
+    - CD11B
+    - CD64
+    negative_aliases:
+    - CD3
+    - CD19
+    - CD20
+    - CD56
+outside_primary_rules:
+  platelet:
+    positive_aliases:
+    - CD41
+    - CD61
+    negative_aliases:
+    - CD45
+    - CD3
+    - CD19
+    - CD14
+  conventional_dendritic:
+    positive_aliases:
+    - HLA-DR
+    - CD11C
+    - CD1C
+    negative_aliases:
+    - CD3
+    - CD19
+    - CD56
+    - CD14
+  plasmacytoid_dendritic:
+    positive_aliases:
+    - HLA-DR
+    - CD123
+    - CD303
+    - CD304
+    negative_aliases:
+    - CD3
+    - CD19
+    - CD56
+    - CD14
+  granulocyte:
+    positive_aliases:
+    - CD15
+    - CD66B
+    - CD16
+    negative_aliases:
+    - CD3
+    - CD19
+    - CD56
+  erythroid:
+    positive_aliases:
+    - CD235A
+    - CD71
+    negative_aliases:
+    - CD45
+    - CD3
+    - CD19
+    - CD14
+ontology_mapping:
+  T_cell: CL:0000084
+  B_cell: CL:0000236
+  NK_cell: CL:0000623
+  monocyte: CL:0000576
+quality_gates:
+  primary_resolved_or_explicit_nonprimary_fraction_min: 0.7
+  forced_fraction_max: 0.0
+  primary_donors_per_label_min: 8
+  primary_cells_per_donor_label_min: 20
+  primary_cells_per_label_min: 500
+  external_donors_min: 5
+  external_donors_per_label_min: 3
+  external_cells_per_label_min: 200

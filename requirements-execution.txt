@@ -1,0 +1,9 @@
+-r requirements.txt
+h5py==3.16.0
+scanpy==1.12.4
+anndata==0.13.3.post0
+scikit-learn==1.9.0
+muon==0.1.9
+mudata==0.4.1
+protobuf==7.36.1
+PyYAML==6.0.3

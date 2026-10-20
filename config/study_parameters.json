@@ -1,0 +1,160 @@
+{
+  "conditions": {
+    "A": {
+      "label": "STRICT_RNA_ONLY",
+      "denominator": "RNA_total",
+      "marker_rank_universe": "RNA",
+      "PCA_input": "RNA",
+      "method_reads_ADT": false
+    },
+    "B": {
+      "label": "MATCHED_MIXED_INPUT_REPLAY",
+      "status": "INTENTIONALLY_CONTAMINATED_COMPARATOR",
+      "denominator": "RNA_plus_ADT_total",
+      "marker_rank_universe": "RNA_plus_ADT",
+      "PCA_input": "RNA_plus_ADT"
+    },
+    "C": {
+      "label": "LATE_FILTER_AFTER_MIXED_NORMALIZATION",
+      "denominator": "RNA_plus_ADT_total",
+      "marker_rank_universe": "RNA",
+      "PCA_input": "RNA",
+      "renormalization_after_removal": false
+    }
+  },
+  "preprocessing": {
+    "normalization": "library_target_10000_then_log1p",
+    "computation_dtype": "float64",
+    "semantic_replay_not_old_byte_rebuild": true,
+    "feature_filter": "max_10_ceil_0.01_context_training_cells",
+    "HVG": "training_population_log_expression_variance_top_2000_or_all_eligible",
+    "HVG_ties": "variance_descending_then_feature_id_ascending",
+    "scaling": "context_training_mean_and_population_SD",
+    "constant_features": "exclude_before_PCA_with_explicit_count",
+    "PCA_k": "min_30_training_n_minus_1_selected_features",
+    "PCA_algorithm": "original_R3_randomized_SVD_oversample_10_two_power_iterations",
+    "PCA_seed": "D3_Zenodo7555405_context_HVG2000_CT001B_PCA_v1_SHA256",
+    "neighbor_k": 30,
+    "neighbor_algorithm": "exact_Euclidean_query_to_context_training_only",
+    "neighbor_ties": "distance_then_reference_cell_id",
+    "no_outer_query_in_any_training_stage": true,
+    "RNA_feature_identity": "verified_named_source_Seurat_RNA_assay_membership",
+    "count_semantics": "source_RDS_RNA_integer_counts_and_ADT_Alevin_count_estimates_exported_float64",
+    "zero_RNA_library": "STOP_WITH_EXPLICIT_ZERO_LIBRARY_STATUS_NO_CELL_DELETION",
+    "zero_ADT_library": "STOP_DIAGNOSTIC_WITH_EXPLICIT_ZERO_LIBRARY_STATUS_NO_CELL_DELETION",
+    "no_SoupX_DoubletFinder_SCT_reselection": "fixed_matched_population_user_authority"
+  },
+  "metrics": {
+    "independent_unit": "donor",
+    "base_unit": "donor_instance_method_condition",
+    "fields": [
+      "AP",
+      "recall_review_10",
+      "precision_review_10",
+      "correct_label_false_review_fraction",
+      "score_coverage"
+    ],
+    "AP": "stepwise_average_precision_with_all_ties_at_same_threshold",
+    "AP_no_positives": "UNDEFINED_NO_POSITIVES",
+    "AP_all_positives": "record_1_NO_DISCRIMINATION_INFORMATION_excluded_from_ranking_comparisons",
+    "review_fraction": 0.1,
+    "review_count": "floor_n_scored_times_0.10_plus_0.5",
+    "review_ties": "score_descending_then_cell_id_ascending",
+    "review_denominator": "exact_common_finite_scored_cells_with_coverage_against_original_scenario_eligible",
+    "contrast_common_set": "within_each_method_intersection_finite_A_B_C_for_each_donor_instance_cell",
+    "ranking_common_set": "intersection_finite_all_six_scores_in_A_B_C_for_each_donor_instance_cell",
+    "score_coverage_limit": 0.9,
+    "low_coverage_state": "COVERAGE_LIMITED",
+    "aggregate_order": "mean_valid_replicates_within_donor_stratum_then_equal_weight_valid_donors_within_stratum_then_equal_weight_all_eight_primary_strata",
+    "missing_replicates": "report_counts_no_zero_imputation_same_common_records_for_contrast",
+    "missing_strata": "overall_primary_summary_undefined_if_any_of_eight_absent",
+    "contrasts": [
+      "B_minus_A",
+      "C_minus_A"
+    ]
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026090702,
+    "unit": "paired_donor_cluster_all_conditions_methods_instances_retained",
+    "interval": "percentile_95_linear_quantiles",
+    "refit": false,
+    "uncertainty_scope": "fixed_pipeline_donor_resampling_not_full_training_uncertainty",
+    "no_P_values": true
+  },
+  "primary_strata": [
+    "Within 10%",
+    "Within 30%",
+    "Systematic 10%",
+    "Systematic 30%",
+    "T_cell omitted",
+    "B_cell omitted",
+    "NK_cell omitted",
+    "monocyte omitted"
+  ],
+  "D4_bootstrap": {
+    "replicates": 2000,
+    "seed": 2026090702,
+    "unit": "paired_donor_cluster_all_conditions_methods_instances_retained",
+    "interval": "percentile_95_linear_quantiles",
+    "refit": false,
+    "uncertainty_scope": "fixed_pipeline_donor_resampling_not_full_training_uncertainty",
+    "no_P_values": true
+  },
+  "methods": {
+    "A_B_C": [
+      "M1_RISK",
+      "M1_MARGIN",
+      "M4_RISK",
+      "NEIGHBOR_DISAGREEMENT",
+      "M2_RISK",
+      "MARKER_MARGIN"
+    ],
+    "families": {
+      "M1": [
+        "M1_RISK",
+        "M1_MARGIN"
+      ],
+      "M4": [
+        "M4_RISK",
+        "NEIGHBOR_DISAGREEMENT"
+      ],
+      "M2": [
+        "M2_RISK",
+        "MARKER_MARGIN"
+      ]
+    },
+    "D": [
+      "M1_MARGIN",
+      "NEIGHBOR_DISAGREEMENT"
+    ],
+    "M1_formula": "frozen_M1_v0.1_max_Z_absolute_distance_Z_log_margin",
+    "M1_margin": "log_distance_observed_plus_1e_minus8_over_min_legal_alternative_plus_1e_minus8",
+    "M1_prototype": "arithmetic_mean_outer_training_observed_label_support_ge20",
+    "M1_reference": "five_D3_inner_donor_heldout_prototype_components_support_ge12_in_same_outer_fitted_space_as_CTMOD001",
+    "M1_reference_scope_note": "original_M1_formula_not_R3_in_sample_reference_shortcut_no_parameter_tuning",
+    "M1_reference_limitation": "inner_feature_space_fit_uses_all_outer_training_cells_but_never_outer_query_donors",
+    "M4": "frozen_v0.2_max_Z_S_Z_G_MAD_IQR_pooled_empirical_normal_zero_scale_fallback",
+    "M4_reference": "five_D3_inner_query_donor_diagnostics_each_context_training_only_representation_and_graph",
+    "M2": "frozen_v0.1_max_Z_P_Z_Q_Z_N_Z_M",
+    "M2_knowledge": "same_four_external_frozen_lineages_including_omitted_label_unequal_reference_knowledge_disclosed",
+    "M2_rank": "zero_0_nonzero_average_full_universe_rank_divided_by_measurable_feature_count",
+    "M2_positive_minimum": 5,
+    "M2_Q": "first_ordered_value_at_cumulative_uniform_weight_0.25_when_ge4",
+    "M2_N": "explicit_negative_mean_when_ge2",
+    "M2_reference": "union_five_D3_inner_query_partitions_equals_outer_training_for_parameter_free_components",
+    "MARKER_MARGIN": "max_available_alternative_positive_marker_score_minus_observed_positive_score",
+    "missing": "retain_NA_with_reason_never_zero_impute",
+    "D3_PCA_seed": "SHA256(D3_Zenodo7555405\\tcontext\\tHVG2000\\tCT001B_PCA_v1) first8bytes modulo 2^32",
+    "marker_adapter": "Exact source RNA gene-symbol match to same frozen marker gene column; ensembl_gene_id API key rebound to frozen symbol; no changed gene set or formula"
+  },
+  "source_semantics": {
+    "RNA": "verified integer raw-count slot in named source assay, total agrees exactly with original nCount_RNA; no SCT/data slot",
+    "ADT": "finite nonnegative Alevin barcode count estimates, noninteger values retained as float64, total agrees exactly with nCount_ADT",
+    "prior_ADT_truth": "frozen CT-001H labels/thresholds unchanged, derived from integer-truncated source export; 544 changed source entries disclosed, 98 fractional entries in selected population",
+    "modality_identity": "trusted named source assay metadata, not feature-name guessing",
+    "specific_fractional_UMI_allocations_rebuilt": false,
+    "no_SoupX_DoubletFinder_or_population_reselection": true
+  },
+  "scope": "Fixed matched populations; no population selection, target generation, fusion, calibration or actions by this release"
+}

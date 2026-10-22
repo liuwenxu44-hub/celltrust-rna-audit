@@ -22,7 +22,7 @@ Run `python scripts/reproduce_summaries.py --output runs/summary-check` from the
 | 4D | `effect_tables/D3_CORE/leave_one_donor_out.tsv.gz`: M4_RISK/B_minus_A and M1_RISK/C_minus_A; AP and the three review metrics. Donor A in the figure is donorA in the source. |
 | 5A | `Figure5/A_paired_bins.csv`: all displayed two-dimensional bin counts, with the same 7,699,418 positive pairs in each branch. `RNA_invariance_audit.csv` records the 28 dependent stage comparisons. |
 | 5B | `Figure5/B_full_empirical_cdf.npz` retains all 199,726 distinct observed decreases with their exact frequencies. `B_ecdf_display.csv` is the display-decimated curve; `B_quantiles.csv` contains exact order-statistic quantiles. Quantiles must be computed from the full frequency distribution, not the displayed curve. |
-| 5C | `Figure5/C_diagnostic_cases.csv`: all 11 case outcomes and diagnostic objects. `C_check_matrix.csv` supports Supplementary Matrix S1. A missing PASS is not automatically a FAIL. |
+| 5C | `Figure5/C_diagnostic_cases.csv`: all 11 case outcomes and diagnostic objects. `C_check_matrix.csv` supports Supplementary Table S2. A missing PASS is not automatically a FAIL. |
 | 5D | `Figure5/D_runtime.csv`: the nine primary single-call durations; no CI or timing replicate is implied. Missing-history controls have a different timer boundary and are excluded. |
 
 ## Donors, support and denominators

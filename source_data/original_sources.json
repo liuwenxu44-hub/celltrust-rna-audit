@@ -1,0 +1,89 @@
+{
+  "D4": {
+    "record": "https://zenodo.org/records/5139561",
+    "record_doi": "10.5281/zenodo.5139561",
+    "version": "1.0.0",
+    "file": "COMBAT-CITESeq-DATA.h5ad",
+    "url": "https://zenodo.org/api/records/5139561/files/COMBAT-CITESeq-DATA.h5ad/content",
+    "bytes": 6409089483,
+    "sha256": "f628a15f25b9ca2f7cdefeab271fd9d007c8d5e47eb80c4b807d5f65e86ff53d",
+    "md5": "87c6b1a733ea1adc37c808d9a357de74",
+    "license": "CC BY 4.0",
+    "paper_doi": "10.1016/j.cell.2022.01.012",
+    "attribution": "COvid-19 Multi-omics Blood ATlas (COMBAT) Consortium",
+    "counts_location": "layers/raw; modality identity from var/feature_types",
+    "creators": [
+      {
+        "name": "COvid-19 Multi-omics Blood ATlas (COMBAT) Consortium",
+        "affiliation": "University of Oxford"
+      }
+    ],
+    "archived_metadata_sha256": "d31185b7236b4731ac144bb8959385ec9d6a6ff6ff2adbb91a33764739963084"
+  },
+  "D3": {
+    "record": "https://zenodo.org/records/7555405",
+    "record_doi": "10.5281/zenodo.7555405",
+    "version": "record 7555405, published 2023-01-25; not the newer SeuratV5 file",
+    "file": "PBMC_vaccine_CITE.rds",
+    "url": "https://zenodo.org/api/records/7555405/files/PBMC_vaccine_CITE.rds/content",
+    "bytes": 1594039156,
+    "sha256": "b0da2cffb4fe1f5bb07087ce69f69fd2f3708fe5670ba5fc736eae2850cf98d4",
+    "md5": "865ace59ce39f48111deac5ea26cae45",
+    "license": "CC BY 4.0",
+    "attribution": "Zhang and colleagues; exact creator list at the archived Zenodo record",
+    "counts_location": "RNA and ADT Seurat assay counts slots; retain fractional ADT estimates",
+    "creators": [
+      {
+        "name": "Bingjie Zhang",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0002-0535-0371"
+      },
+      {
+        "name": "Rabi Upadhyay",
+        "affiliation": "New York University Langone Health",
+        "orcid": "0000-0002-2154-0132"
+      },
+      {
+        "name": "Yuhan Hao",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0002-1810-0822"
+      },
+      {
+        "name": "Marie I. Samanovic",
+        "affiliation": "New York University Langone Vaccine Center",
+        "orcid": "0000-0002-6987-2232"
+      },
+      {
+        "name": "Ramin S. Herati",
+        "affiliation": "New York University Langone Vaccine Center",
+        "orcid": "0000-0003-2613-4050"
+      },
+      {
+        "name": "John Blair",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0001-7517-6148"
+      },
+      {
+        "name": "Jordan Axelrad",
+        "affiliation": "New York University Grossman School of Medicine",
+        "orcid": "0000-0003-1951-7790"
+      },
+      {
+        "name": "Mark J. Mulligan",
+        "affiliation": "New York University Langone Vaccine Center",
+        "orcid": "0000-0001-7262-9746"
+      },
+      {
+        "name": "Dan R. Littman",
+        "affiliation": "New York University Langone Health",
+        "orcid": "0000-0002-2850-8688"
+      },
+      {
+        "name": "Rahul Satija",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0001-9448-8833"
+      }
+    ],
+    "archived_metadata_sha256": "623f7d7512d2647504af093b81a4843e7acaddddb9eae938972fa23b7a5e64a4"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "purpose": "Derived donor-support disclosure from fixed published outputs; no model fit",
+  "files": [
+    {
+      "path": "summary_support.tsv.gz",
+      "sha256": "cc11a4a84cc80b44cf2a573ec4b5b2ff64daba1b86a77f14a7c6e34a629b4700",
+      "bytes": 56195,
+      "content_sha256": "44df1695bbd4c4b969fe33c0a6df07ff066957fb67250af42f19abaafbf58985",
+      "operation": "Reproduce existing effect summaries and expose effective donor counts",
+      "rows": 2520,
+      "generator": "scripts/reproduce_summaries.py",
+      "source_manifest_sha256": "bc17169d14cdffabdf0e28af1de11baab50cccbb2263c6bb36564fa01f0f1193"
+    }
+  ]
+}

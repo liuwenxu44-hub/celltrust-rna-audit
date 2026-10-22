@@ -1,0 +1,209 @@
+{
+  "created": "2023-01-23T23:25:44.601583+00:00",
+  "modified": "2023-09-21T16:57:37.130213+00:00",
+  "id": 7555405,
+  "conceptrecid": "7555404",
+  "doi": "10.5281/zenodo.7555405",
+  "conceptdoi": "10.5281/zenodo.7555404",
+  "doi_url": "https://doi.org/10.5281/zenodo.7555405",
+  "metadata": {
+    "title": "COVID-19 vaccination single cell datasets",
+    "doi": "10.5281/zenodo.7555405",
+    "publication_date": "2023-01-25",
+    "description": "<p>PBMC samples for CITE-seq and ASAP-seq were&nbsp;collected&nbsp;at four time points: immediately before (Day 0) vaccination, after primary vaccination (Day 2, Day 10), and seven days after boost vaccination (Day 28).</p>\n\n<p>The datasets uploaded here are three processed single-cell datasets:</p>\n\n<p>1.&nbsp;PBMC_vaccine_CITE.rds: 3&#39; RNA and surface proteins (173 TotalSeq-A antibodies)</p>\n\n<p>2.&nbsp;PBMC_vaccine_ASAP.rds: Chromatin accessibility&nbsp;and surface proteins&nbsp;(173 TotalSeq-A antibodies)</p>\n\n<p>3.&nbsp;PBMC_vaccine_ECCITE_TCR.rds:&nbsp;5&#39; RNA, surface proteins (137 TotalSeq-C antibodies), TCR and dextramer loaded with peptides of SARS-CoV-2 spike protein.</p>\n\n<p>antigen_module_genes.rds: This file contains the vaccine-induced gene sets.</p>\n\n<p>antigen_module_peaks.rds: This file contains the DE peaks specific for vaccine-induced cells.&nbsp;</p>\n\n<p>To map the&nbsp;scRNA-seq query dataset onto our CITE-seq reference:</p>\n\n<pre><code>library(Seurat)\n\nPBMC_CITE &lt;- readRDS(\"/zenedo/PBMC_vaccine_CITE.rds\")\nquery_scRNA &lt;- readRDS(\"/home/xx/your_own_data.rds\")\n\nanchors &lt;- FindTransferAnchors(\n    reference = PBMC_CITE,\n    query = query_scRNA,\n    normalization.method = \"SCT\",\n    k.anchor = 5,\n    reference.reduction = \"spca\",\n    dims = 1:50)\n  \nquery_scRNA &lt;- MapQuery(\n    anchorset = anchors,\n    query = query_scRNA,\n    reference = PBMC_CITE,\n    refdata = list(\n      l1 = \"celltypel1\",\n      l2 = \"celltypel2\",\n      l3 = \"celltypel3\"),\n    reference.reduction = \"spca\",\n    reduction.model = \"wnn.umap\")  \n\n\n</code></pre>\n\n<p>To use the scATAC-seq data, please run the commands below to update the path of the fragment file for the object.&nbsp;&nbsp;</p>\n\n<pre><code>Vaccine_ASAP &lt;- readRDS(\"PBMC_vaccine_ASAP.rds\")\n# remove fragment file information\nFragments(Vaccine_ASAP) &lt;- NULL\n# Update the path of the fragment file \nFragments(Vaccine_ASAP) &lt;- CreateFragmentObject(path = \"download/PBMC_vaccine_ASAP_fragments.tsv.gz\", cells = Cells(Vaccine_ASAP))</code></pre>\n\n<p>&nbsp;</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Bingjie Zhang",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0002-0535-0371"
+      },
+      {
+        "name": "Rabi Upadhyay",
+        "affiliation": "New York University Langone Health",
+        "orcid": "0000-0002-2154-0132"
+      },
+      {
+        "name": "Yuhan Hao",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0002-1810-0822"
+      },
+      {
+        "name": "Marie I. Samanovic",
+        "affiliation": "New York University Langone Vaccine Center",
+        "orcid": "0000-0002-6987-2232"
+      },
+      {
+        "name": "Ramin S. Herati",
+        "affiliation": "New York University Langone Vaccine Center",
+        "orcid": "0000-0003-2613-4050"
+      },
+      {
+        "name": "John Blair",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0001-7517-6148"
+      },
+      {
+        "name": "Jordan Axelrad",
+        "affiliation": "New York University Grossman School of Medicine",
+        "orcid": "0000-0003-1951-7790"
+      },
+      {
+        "name": "Mark J. Mulligan",
+        "affiliation": "New York University Langone Vaccine Center",
+        "orcid": "0000-0001-7262-9746"
+      },
+      {
+        "name": "Dan R. Littman",
+        "affiliation": "New York University Langone Health",
+        "orcid": "0000-0002-2850-8688"
+      },
+      {
+        "name": "Rahul Satija",
+        "affiliation": "New York Genome Center",
+        "orcid": "0000-0001-9448-8833"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": false,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "7555404"
+          }
+        }
+      ]
+    }
+  },
+  "title": "COVID-19 vaccination single cell datasets",
+  "links": {
+    "self": "https://zenodo.org/api/records/7555405",
+    "self_html": "https://zenodo.org/records/7555405",
+    "preview_html": "https://zenodo.org/records/7555405?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.7555405",
+    "self_doi": "https://doi.org/10.5281/zenodo.7555405",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7555405",
+    "reserve_doi": "https://zenodo.org/api/records/7555405/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/7555404",
+    "parent_html": "https://zenodo.org/records/7555404",
+    "parent_doi": "https://doi.org/10.5281/zenodo.7555404",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7555404",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:7555405/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:7555405/sequence/default",
+    "files": "https://zenodo.org/api/records/7555405/files",
+    "media_files": "https://zenodo.org/api/records/7555405/media-files",
+    "archive": "https://zenodo.org/api/records/7555405/files-archive",
+    "archive_media": "https://zenodo.org/api/records/7555405/media-files-archive",
+    "latest": "https://zenodo.org/api/records/7555405/versions/latest",
+    "latest_html": "https://zenodo.org/records/7555405/latest",
+    "versions": "https://zenodo.org/api/records/7555405/versions",
+    "draft": "https://zenodo.org/api/records/7555405/draft",
+    "access_links": "https://zenodo.org/api/records/7555405/access/links",
+    "access_grants": "https://zenodo.org/api/records/7555405/access/grants",
+    "access_users": "https://zenodo.org/api/records/7555405/access/users",
+    "access_request": "https://zenodo.org/api/records/7555405/access/request",
+    "access": "https://zenodo.org/api/records/7555405/access",
+    "communities": "https://zenodo.org/api/records/7555405/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/7555405/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/7555405/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/7555405/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/7555405/quota-increase",
+    "requests": "https://zenodo.org/api/records/7555405/requests"
+  },
+  "updated": "2023-09-21T16:57:37.130213+00:00",
+  "recid": "7555405",
+  "revision": 8,
+  "files": [
+    {
+      "id": "172a5fdb-8729-48eb-87bc-9fb00c95ce68",
+      "key": "PBMC_vaccine_ECCITE_TCR.rds",
+      "size": 436475696,
+      "checksum": "md5:6b880956e5f0e3c33c37bb0d64b44f15",
+      "links": {
+        "self": "https://zenodo.org/api/records/7555405/files/PBMC_vaccine_ECCITE_TCR.rds/content"
+      }
+    },
+    {
+      "id": "eee9f0d4-cc7d-43a0-ac58-93419a3429dc",
+      "key": "PBMC_vaccine_CITE.rds",
+      "size": 1594039156,
+      "checksum": "md5:865ace59ce39f48111deac5ea26cae45",
+      "links": {
+        "self": "https://zenodo.org/api/records/7555405/files/PBMC_vaccine_CITE.rds/content"
+      }
+    },
+    {
+      "id": "b4d0a7a7-9dda-47ab-829b-796406a1347d",
+      "key": "PBMC_vaccine_ASAP.rds",
+      "size": 4660854702,
+      "checksum": "md5:01ab1546dfd1cc08b742006259c89b44",
+      "links": {
+        "self": "https://zenodo.org/api/records/7555405/files/PBMC_vaccine_ASAP.rds/content"
+      }
+    },
+    {
+      "id": "a974d35f-3757-4633-92ab-a29ccede5856",
+      "key": "antigen_module_genes.rds",
+      "size": 961,
+      "checksum": "md5:2eac6dcf876371bbbda732836943b711",
+      "links": {
+        "self": "https://zenodo.org/api/records/7555405/files/antigen_module_genes.rds/content"
+      }
+    },
+    {
+      "id": "1c7829c2-4e79-4235-99aa-bebf0535825d",
+      "key": "PBMC_vaccine_ASAP_fragments.tsv.gz.tbi",
+      "size": 2522995,
+      "checksum": "md5:24c98904ac3d4bde425f7e6843dbcc60",
+      "links": {
+        "self": "https://zenodo.org/api/records/7555405/files/PBMC_vaccine_ASAP_fragments.tsv.gz.tbi/content"
+      }
+    },
+    {
+      "id": "65e857bf-a042-4d0f-b843-7327c9170d42",
+      "key": "PBMC_vaccine_ASAP_fragments.tsv.gz",
+      "size": 12369211892,
+      "checksum": "md5:5805502afbef2a1e9942bdddf0934e50",
+      "links": {
+        "self": "https://zenodo.org/api/records/7555405/files/PBMC_vaccine_ASAP_fragments.tsv.gz/content"
+      }
+    },
+    {
+      "id": "ed0766de-ff76-47d4-99eb-34215e723ec9",
+      "key": "antigen_module_peaks.rds",
+      "size": 100308,
+      "checksum": "md5:b2e021d61fa81ce6bfac8aa9980a2814",
+      "links": {
+        "self": "https://zenodo.org/api/records/7555405/files/antigen_module_peaks.rds/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "479716"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 6862,
+    "unique_downloads": 3497,
+    "views": 3044,
+    "unique_views": 2770,
+    "version_downloads": 1776,
+    "version_unique_downloads": 1591,
+    "version_unique_views": 2060,
+    "version_views": 2255
+  },
+  "state": "done",
+  "submitted": true
+}

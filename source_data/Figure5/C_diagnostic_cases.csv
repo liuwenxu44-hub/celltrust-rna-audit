@@ -1,0 +1,12 @@
+id,label,group,status,reason,location,detail_field,original_file,status_pointer,reason_pointer,display_label,diagnostic_object,case_role,location_pointer
+clean,Clean execution,clean,PASS,SUPPORTED_REAL_D3_O1_PATH_RECONSTRUCTED,,,real/evaluation/clean_guard.json,/status,/reason,Clean execution,clean_control,primary_case,/reason
+fresh_rebuild,Fresh rebuild,clean,PASS,SUPPORTED_REAL_D3_O1_PATH_RECONSTRUCTED,,,real/evaluation/fresh_rebuild_guard.json,/status,/reason,Fresh rebuild,clean_control,primary_case,/reason
+late_adt,ADT removed after normalization,injected,FAIL,IDENTITY_OR_INDEX_CONFLICT,state.selected,,real/evaluation/late_adt_guard.json,/status,/reason,Late ADT removal,identity,primary_case,/details/location
+wrong_layer,Wrong input layer,injected,FAIL,IDENTITY_OR_INDEX_CONFLICT,state.selected,,real/evaluation/wrong_layer_guard.json,/status,/reason,Wrong RNA input layer,identity,primary_case,/details/location
+stale_pca,Stale PCA input,injected,FAIL,EXECUTION_SIGNATURE_CONFLICT,actual_PCA_getter_operand,sha256,real/evaluation/stale_pca_guard.json,/status,/reason,Outdated PCA input,pca_input,primary_case,/details/location
+stale_neighbors,Stale neighbor input,injected,FAIL,EXECUTION_SIGNATURE_CONFLICT,actual_cdist.query_array.0,sha256,real/evaluation/stale_neighbors_guard.json,/status,/reason,Outdated neighbor input,neighbor_input,primary_case,/details/location
+cell_misalignment,Misaligned cell identities,injected,FAIL,IDENTITY_OR_INDEX_CONFLICT,state.cell_ids,,real/evaluation/cell_misalignment_guard.json,/status,/reason,Cell misalignment,identity,primary_case,/details/location
+missing_provenance,Provenance opted out,scope,NOT_VERIFIABLE,PROVENANCE_NOT_REQUIRED_BY_CONTRACT,,,real/evaluation/missing_provenance_guard.json,/status,/reason,Execution records not required,scope_limit,primary_case,/reason
+unsupported_joint,Unsupported joint recipe,scope,NOT_VERIFIABLE,UNSUPPORTED_RECIPE,,,real/evaluation/unsupported_joint_guard.json,/status,/reason,Unsupported joint-modality workflow,scope_limit,primary_case,/reason
+missing_actual_pca_getter,PCA getter trace removed,history,NOT_VERIFIABLE,REQUIRED_EVIDENCE_MISSING,trace,pca_get_obs_rep,real/provenance_qa/missing_actual_pca_getter/guard.json,/status,/reason,PCA record removed,pca_input,interface_control,/details/field
+missing_actual_cdist,Distance-call trace removed,history,NOT_VERIFIABLE,REQUIRED_EVIDENCE_MISSING,trace,cdist_calls,real/provenance_qa/missing_actual_cdist/guard.json,/status,/reason,Distance record removed,neighbor_input,interface_control,/details/field

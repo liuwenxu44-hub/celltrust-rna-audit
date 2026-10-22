@@ -1,0 +1,29 @@
+﻿branch,branch_label,stage,stage_label,exact_match,max_abs_difference,within_tolerance,source_pointer
+fresh_rebuild,Fresh rebuild,normalized_RNA,Normalized RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/fresh_rebuild/stages/0
+fresh_rebuild,Fresh rebuild,HVG,HVG mask,True,0.0,True,/rebuild_and_counterfactual_comparisons/fresh_rebuild/stages/1
+fresh_rebuild,Fresh rebuild,scaled_RNA,Scaled RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/fresh_rebuild/stages/2
+fresh_rebuild,Fresh rebuild,PCA,PCA scores,True,0.0,True,/rebuild_and_counterfactual_comparisons/fresh_rebuild/stages/3
+fresh_rebuild,Fresh rebuild,PCA_components,PCA loadings,True,0.0,True,/rebuild_and_counterfactual_comparisons/fresh_rebuild/stages/4
+fresh_rebuild,Fresh rebuild,distances,Neighbor distances,True,0.0,True,/rebuild_and_counterfactual_comparisons/fresh_rebuild/stages/5
+fresh_rebuild,Fresh rebuild,connectivities,Graph weights,True,0.0,True,/rebuild_and_counterfactual_comparisons/fresh_rebuild/stages/6
+adt_deleted,ADT removed,normalized_RNA,Normalized RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_deleted/stages/0
+adt_deleted,ADT removed,HVG,HVG mask,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_deleted/stages/1
+adt_deleted,ADT removed,scaled_RNA,Scaled RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_deleted/stages/2
+adt_deleted,ADT removed,PCA,PCA scores,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_deleted/stages/3
+adt_deleted,ADT removed,PCA_components,PCA loadings,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_deleted/stages/4
+adt_deleted,ADT removed,distances,Neighbor distances,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_deleted/stages/5
+adt_deleted,ADT removed,connectivities,Graph weights,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_deleted/stages/6
+adt_scaled_x2,ADT counts ×2,normalized_RNA,Normalized RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_scaled_x2/stages/0
+adt_scaled_x2,ADT counts ×2,HVG,HVG mask,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_scaled_x2/stages/1
+adt_scaled_x2,ADT counts ×2,scaled_RNA,Scaled RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_scaled_x2/stages/2
+adt_scaled_x2,ADT counts ×2,PCA,PCA scores,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_scaled_x2/stages/3
+adt_scaled_x2,ADT counts ×2,PCA_components,PCA loadings,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_scaled_x2/stages/4
+adt_scaled_x2,ADT counts ×2,distances,Neighbor distances,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_scaled_x2/stages/5
+adt_scaled_x2,ADT counts ×2,connectivities,Graph weights,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_scaled_x2/stages/6
+adt_rows_shuffled,ADT rows shuffled,normalized_RNA,Normalized RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_rows_shuffled/stages/0
+adt_rows_shuffled,ADT rows shuffled,HVG,HVG mask,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_rows_shuffled/stages/1
+adt_rows_shuffled,ADT rows shuffled,scaled_RNA,Scaled RNA,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_rows_shuffled/stages/2
+adt_rows_shuffled,ADT rows shuffled,PCA,PCA scores,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_rows_shuffled/stages/3
+adt_rows_shuffled,ADT rows shuffled,PCA_components,PCA loadings,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_rows_shuffled/stages/4
+adt_rows_shuffled,ADT rows shuffled,distances,Neighbor distances,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_rows_shuffled/stages/5
+adt_rows_shuffled,ADT rows shuffled,connectivities,Graph weights,True,0.0,True,/rebuild_and_counterfactual_comparisons/adt_rows_shuffled/stages/6

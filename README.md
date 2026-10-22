@@ -34,9 +34,23 @@ python -B scripts/modality_guard.py --demo --output runs/modality-demo
 
 The demo changes or removes artificial ADT counts and checks that RNA-only normalization stays the same. It saves a report and the normalized RNA matrix in `runs/modality-demo/`, not a paper result. Use a new output directory for each run. The tests also need `h5py`, included in the installation command above.
 
+## Check the manuscript results
+
+The [source-data directory](source_data/README.md) contains the numbers behind Figures 2–5: donor-level metrics and their denominators, effect estimates and intervals, reference-scale diagnostics, and the recorded technical cases. It also includes the fixed selected cells, donor partitions, observed labels, evaluation targets and ADT thresholds for both study subsets. The original count matrices remain with the data providers.
+
+After installing the requirements, run:
+
+```bash
+python -B scripts/reproduce_summaries.py --output runs/summary-check
+```
+
+This recomputes the effect summaries and confidence intervals from saved donor-level results, checks the D3 donor/leave-one-out results and technical figure data, and verifies the fixed input tables. It does not refit models or re-create the final artwork. The summary check was actually run on the study data, not just artificial arrays.
+
+For a real-data example, [download the exact D3 RDS and prepare its fixed subset](docs/inputs.md#prepare-the-real-d3-example). That entry was tested against the original file: its RNA and ADT outputs match the matrices used in the study byte for byte. This input preparation is not a full rerun of every analysis.
+
 ## Run the scoring code
 
-You need prepared count matrices, feature metadata, cell labels and donor splits, as described in the [input guide](docs/inputs.md). The study's cell-level data are not included; this is not a one-command reproduction of every result.
+You need prepared count matrices, feature metadata, cell labels and donor splits, as described in the [input guide](docs/inputs.md). The fixed identities, labels and splits are included; count matrices must be obtained from the original providers. This is not a one-command reproduction of every result.
 
 For example, to score one supplied label set under workflow A:
 
@@ -48,7 +62,7 @@ python -B scripts/score.py --inputs prepared_dataset \
 
 This writes six scores per cell to a NumPy `.npz` file. The scoring command does not read the target labels used to evaluate errors, choose new cells or change the training/test splits.
 
-**D4** is the COMBAT development dataset; **D3** is the vaccination dataset used for an independent check. `--dataset D3` selects its gene-symbol mapping and random-seed rule, not a data download. Reproducing the study requires the original analysis inputs and splits.
+**D4** is the COMBAT development dataset; **D3** is the vaccination dataset used for an independent check. `--dataset D3` selects its gene-symbol mapping and random-seed rule, not a data download. Use the supplied fixed tables rather than selecting cells or assigning new splits.
 
 ## Check what a workflow actually used
 
@@ -86,8 +100,8 @@ Uncertainty intervals resample donors without retraining. M1's internal referenc
 
 The MUON example uses the package versions listed here, not the tutorial's original software environment. Normalization is checked separately, but the full graph calculation is not independently reimplemented. Deliberately introduced faults are our tests, not errors attributed to the tutorial. The test cases share inputs; they do not measure how often such errors occur in published work.
 
-This code release was tested on artificial data, not by rerunning the complete study from the public repository. Obtain data from the original providers and follow the input guide for the study's count definitions and analysis set. No participant-level files, experiment logs or internal project records are included.
+The code has artificial-data tests, a study-data summary check and a tested real-D3 input preparation entry. The complete raw-data-to-manuscript study has not been independently rerun from this public repository. The source tables contain public deidentified cell/donor identities but no clinical covariates. Experiment logs, internal review records and fitted model caches are not included.
 
 ## License
 
-No software license has been assigned to this release yet. Third-party tools and datasets remain subject to their own licenses and terms.
+Original CellTrust code is available under the [MIT license](LICENSE). Third-party tools and datasets retain their own terms; see [attribution and scope](THIRD_PARTY_NOTICES.md).

@@ -1,0 +1,10 @@
+id,case,case_label,status,elapsed_seconds,original_pointer
+clean,clean,Clean execution,PASS,4.26699418341741,/cases/0/elapsed_seconds
+fresh_rebuild,fresh_rebuild,Fresh rebuild,PASS,4.22203106386587,/cases/1/elapsed_seconds
+late_adt,late_adt,Late ADT removal,FAIL,2.2368867369368672,/cases/2/elapsed_seconds
+wrong_layer,wrong_layer,Wrong input layer,FAIL,2.2798045170493424,/cases/3/elapsed_seconds
+stale_pca,stale_pca,Stale PCA input,FAIL,3.140353174880147,/cases/4/elapsed_seconds
+stale_neighbors,stale_neighbors,Stale neighbor input,FAIL,3.7096082912757993,/cases/5/elapsed_seconds
+cell_misalignment,cell_misalignment,Cell misalignment,FAIL,2.215031056664884,/cases/6/elapsed_seconds
+missing_provenance,missing_provenance,Provenance opt-out,NOT_VERIFIABLE,0.47142132511362433,/cases/7/elapsed_seconds
+unsupported_joint,unsupported_joint,Unsupported joint,NOT_VERIFIABLE,0.4637127169407904,/cases/8/elapsed_seconds

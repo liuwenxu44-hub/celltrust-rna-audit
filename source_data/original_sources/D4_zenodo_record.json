@@ -1,0 +1,392 @@
+{
+  "created": "2021-08-17T13:13:26.268528+00:00",
+  "modified": "2024-07-18T21:26:06.260770+00:00",
+  "id": 5139561,
+  "conceptrecid": "5139560",
+  "doi": "10.5281/zenodo.5139561",
+  "conceptdoi": "10.5281/zenodo.5139560",
+  "doi_url": "https://doi.org/10.5281/zenodo.5139561",
+  "metadata": {
+    "title": "A blood atlas of COVID-19 defines hallmarks of disease severity and specificity: Associated data",
+    "doi": "10.5281/zenodo.5139561",
+    "publication_date": "2021-08-17",
+    "description": "<p>This dataset contains&nbsp;raw and processed data&nbsp;from the COvid-19 Multi-omics Blood&nbsp;ATlas&nbsp;(COMBAT) consortium.&nbsp;Data are divided into 26 datasets&nbsp;representing&nbsp;anonymised&nbsp;raw and processed data from&nbsp;deep immune phenotyping of peripheral blood from COVID-19 patients.&nbsp;</p>\n\n<p>In addition to the data listed below, some datasets&nbsp;are&nbsp;available through other repositories:&nbsp;</p>\n\n<ul>\n\t<li>\n\t<p>Proteomics data&nbsp;(CBD-KEY-PROTEOMICS)&nbsp;is available at PRIDE</p>\n\n\t<ul>\n\t\t<li>\n\t\t<p>Accession number: PDX023175</p>\n\t\t</li>\n\t\t<li>\n\t\t<p>Contact: Roman&nbsp;Fischer</p>\n\t\t</li>\n\t</ul>\n\t</li>\n</ul>\n\n<ul>\n\t<li>\n\t<p>CITESeq&nbsp;annotations (CBD-KEY-ANNDATA) have also been made available through the COVID-19 Cell Atlas</p>\n\n\t<ul>\n\t\t<li>\n\t\t<p><a href=\"https://www.covid19cellatlas.org/\">https://www.covid19cellatlas.org/</a></p>\n\t\t</li>\n\t\t<li>Contact: Stephen Sansom</li>\n\t</ul>\n\t</li>\n\t<li>\n\t<p>Genetic data and detailed clinical information&nbsp;are&nbsp;available via a data access&nbsp;agreement through&nbsp;EGA</p>\n\n\t<ul>\n\t\t<li>\n\t\t<p>Study accession: EGAS00001005493&nbsp;</p>\n\t\t</li>\n\t</ul>\n\t</li>\n</ul>\n\n<p>For further information regarding specific datasets, please contact the individuals listed in Dataset_descriptions.pdf through&nbsp;<a href=\"mailto:contact@combat.ox.ac.uk\">contact@combat.ox.ac.uk</a>.&nbsp;</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "COvid-19 Multi-omics Blood ATlas (COMBAT) Consortium",
+        "affiliation": "University of Oxford"
+      }
+    ],
+    "keywords": [
+      "COVID-19",
+      "Coronavirus",
+      "SARS-CoV-2",
+      "blood",
+      "immune",
+      "transcriptomics",
+      "epigenetic",
+      "proteomics",
+      "multi-omics",
+      "single cell",
+      "sepsis",
+      "influenza"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.1101/2021.05.11.21256877",
+        "relation": "isSupplementTo",
+        "resource_type": "publication-preprint",
+        "scheme": "doi"
+      }
+    ],
+    "version": "1.0.0",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": false,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "5139560"
+          }
+        }
+      ]
+    }
+  },
+  "title": "A blood atlas of COVID-19 defines hallmarks of disease severity and specificity: Associated data",
+  "links": {
+    "self": "https://zenodo.org/api/records/5139561",
+    "self_html": "https://zenodo.org/records/5139561",
+    "preview_html": "https://zenodo.org/records/5139561?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.5139561",
+    "self_doi": "https://doi.org/10.5281/zenodo.5139561",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.5139561",
+    "reserve_doi": "https://zenodo.org/api/records/5139561/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/5139560",
+    "parent_html": "https://zenodo.org/records/5139560",
+    "parent_doi": "https://doi.org/10.5281/zenodo.5139560",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.5139560",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:5139561/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:5139561/sequence/default",
+    "files": "https://zenodo.org/api/records/5139561/files",
+    "media_files": "https://zenodo.org/api/records/5139561/media-files",
+    "thumbnails": {
+      "10": "https://zenodo.org/api/iiif/record:5139561:Dataset_descriptions.pdf/full/%5E10,/0/default.jpg",
+      "50": "https://zenodo.org/api/iiif/record:5139561:Dataset_descriptions.pdf/full/%5E50,/0/default.jpg",
+      "100": "https://zenodo.org/api/iiif/record:5139561:Dataset_descriptions.pdf/full/%5E100,/0/default.jpg",
+      "250": "https://zenodo.org/api/iiif/record:5139561:Dataset_descriptions.pdf/full/%5E250,/0/default.jpg",
+      "750": "https://zenodo.org/api/iiif/record:5139561:Dataset_descriptions.pdf/full/%5E750,/0/default.jpg",
+      "1200": "https://zenodo.org/api/iiif/record:5139561:Dataset_descriptions.pdf/full/%5E1200,/0/default.jpg"
+    },
+    "archive": "https://zenodo.org/api/records/5139561/files-archive",
+    "archive_media": "https://zenodo.org/api/records/5139561/media-files-archive",
+    "latest": "https://zenodo.org/api/records/5139561/versions/latest",
+    "latest_html": "https://zenodo.org/records/5139561/latest",
+    "versions": "https://zenodo.org/api/records/5139561/versions",
+    "draft": "https://zenodo.org/api/records/5139561/draft",
+    "access_links": "https://zenodo.org/api/records/5139561/access/links",
+    "access_grants": "https://zenodo.org/api/records/5139561/access/grants",
+    "access_users": "https://zenodo.org/api/records/5139561/access/users",
+    "access_request": "https://zenodo.org/api/records/5139561/access/request",
+    "access": "https://zenodo.org/api/records/5139561/access",
+    "communities": "https://zenodo.org/api/records/5139561/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/5139561/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/5139561/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/5139561/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/5139561/quota-increase",
+    "requests": "https://zenodo.org/api/records/5139561/requests"
+  },
+  "updated": "2024-07-18T21:26:06.260770+00:00",
+  "recid": "5139561",
+  "revision": 6,
+  "files": [
+    {
+      "id": "bc4286e8-f153-4e7b-8e8b-e5116c6c45dc",
+      "key": "CBD-KEY-LUMINEX.tar.gz",
+      "size": 1035067,
+      "checksum": "md5:8c4c5c3b3db0a7bd31ac9e0b23a8f196",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-LUMINEX.tar.gz/content"
+      }
+    },
+    {
+      "id": "a4c0f990-e66f-46f3-bd81-52684dcc418d",
+      "key": "CBD-RAW-CYTOF-WB-D.tar.gz",
+      "size": 1570337113,
+      "checksum": "md5:94624d98ee28ce1496f28e7d94afd498",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-RAW-CYTOF-WB-D.tar.gz/content"
+      }
+    },
+    {
+      "id": "dea45a5c-700d-4817-8ae3-69410e372073",
+      "key": "CBD-KEY-CITESEQ-GEX-WGCNA.tar.gz",
+      "size": 4146798,
+      "checksum": "md5:415da3b0551c2ca1e57bc52ca91e91e1",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CITESEQ-GEX-WGCNA.tar.gz/content"
+      }
+    },
+    {
+      "id": "8a1c2a16-7a83-4045-8979-03815f93af9f",
+      "key": "CBD-KEY-CYTOF-MYELOID.tar.gz",
+      "size": 1876070467,
+      "checksum": "md5:d14d0f26573230e643a2d855a233f837",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CYTOF-MYELOID.tar.gz/content"
+      }
+    },
+    {
+      "id": "d75de6da-3ec1-4e4e-85df-41e5fb66c696",
+      "key": "COMBAT-CITESeq-DATA.h5ad",
+      "size": 6409089483,
+      "checksum": "md5:87c6b1a733ea1adc37c808d9a357de74",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/COMBAT-CITESeq-DATA.h5ad/content"
+      }
+    },
+    {
+      "id": "1180dd7a-c224-42b0-ba26-aff7dd177134",
+      "key": "CBD-KEY-RNASEQ-WB.tar.gz",
+      "size": 31439650,
+      "checksum": "md5:d2b3a1f1a170eecb527c594149e39909",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-RNASEQ-WB.tar.gz/content"
+      }
+    },
+    {
+      "id": "6a051683-d2a3-4399-a140-5c78467a900d",
+      "key": "CBD-KEY-SDA.tar.gz",
+      "size": 112614755,
+      "checksum": "md5:522df0d5109dd67a6b7608c19c6c3a12",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-SDA.tar.gz/content"
+      }
+    },
+    {
+      "id": "b74f3046-5ce1-4e71-ab9e-fe3a3ca390d9",
+      "key": "CBD-KEY-FACS.tar.gz",
+      "size": 154844,
+      "checksum": "md5:b6379329656711a1b0cacbf60d837821",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-FACS.tar.gz/content"
+      }
+    },
+    {
+      "id": "069ba57f-08ae-4f0f-b0a8-d53be010f529",
+      "key": "CBD-KEY-RNASEQ-WGCNA.tar.gz",
+      "size": 633646,
+      "checksum": "md5:13ba7d72b5402fd814e8484737e58eb9",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-RNASEQ-WGCNA.tar.gz/content"
+      }
+    },
+    {
+      "id": "38ca58c2-d243-4aec-a1a9-d61f15e16e66",
+      "key": "CBD-RAW-FACS.tar.gz",
+      "size": 2956956286,
+      "checksum": "md5:98a8e3d34549f5bcc122d712ad7756f5",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-RAW-FACS.tar.gz/content"
+      }
+    },
+    {
+      "id": "d8f2b2d6-a8f8-4391-bfa2-1d1e3c070a15",
+      "key": "CBD-KEY-CITESEQ-VDJ-T.tar.gz",
+      "size": 33377474,
+      "checksum": "md5:e6d81e83b191d1d2c7045aab020fbe5a",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CITESEQ-VDJ-T.tar.gz/content"
+      }
+    },
+    {
+      "id": "2f81cb11-e7e5-4011-a51a-8acbaeb8a5ec",
+      "key": "CBD-KEY-ML.tar.gz",
+      "size": 114448,
+      "checksum": "md5:5459f6b10e499a7f7d800996269fa8af",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-ML.tar.gz/content"
+      }
+    },
+    {
+      "id": "0c79ccc2-a3c9-4bd3-bcc5-66e8ee35b00c",
+      "key": "CBD-RAW-CYTOF-WB.tar.gz",
+      "size": 823401214,
+      "checksum": "md5:3d765bccd1327ce66dcc49793f0b99d2",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-RAW-CYTOF-WB.tar.gz/content"
+      }
+    },
+    {
+      "id": "721e98a5-2c0f-4356-8f3e-240c2439617f",
+      "key": "CBD-KEY-ATAC.tar.gz",
+      "size": 13744446823,
+      "checksum": "md5:c25ba09f27ada09d483b2bae0edec137",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-ATAC.tar.gz/content"
+      }
+    },
+    {
+      "id": "dc082668-3896-463f-ac95-3ec5384edbf5",
+      "key": "CBD-KEY-CLINVAR.tar.gz",
+      "size": 39725,
+      "checksum": "md5:c5516db86341dcb1e74000e5a5d218a0",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CLINVAR.tar.gz/content"
+      }
+    },
+    {
+      "id": "011f08b4-cf83-4d6d-87f7-2febb58aafae",
+      "key": "CBD-KEY-SIMON.tar.gz",
+      "size": 28498272,
+      "checksum": "md5:2f6a4eff1d106420bf337fbb934a1480",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-SIMON.tar.gz/content"
+      }
+    },
+    {
+      "id": "342e8f10-d726-4a4a-a286-fb2d07678293",
+      "key": "Dataset_descriptions.pdf",
+      "size": 278960,
+      "checksum": "md5:280806d0f6ed878bd4684472e74d3efc",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/Dataset_descriptions.pdf/content"
+      }
+    },
+    {
+      "id": "14dbd33a-6b83-4ba9-affc-6072ba658c2a",
+      "key": "CBD-KEY-CYTOF-WB-D.tar.gz",
+      "size": 1816498145,
+      "checksum": "md5:eb8375ee7ce554ee3523d792b1e5132c",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CYTOF-WB-D.tar.gz/content"
+      }
+    },
+    {
+      "id": "66357243-54e7-45cf-a87f-6d9019971f05",
+      "key": "CBD-KEY-SNF.tar.gz",
+      "size": 3262,
+      "checksum": "md5:7b979a2cfa34f4f391356ea54f91c227",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-SNF.tar.gz/content"
+      }
+    },
+    {
+      "id": "f4225cd2-99f1-4930-9261-309d0c547085",
+      "key": "CBD-RAW-CYTOF-MYELOID.tar.gz",
+      "size": 4297728192,
+      "checksum": "md5:29872c65f1b9f6c3c3f8159dff206ec8",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-RAW-CYTOF-MYELOID.tar.gz/content"
+      }
+    },
+    {
+      "id": "68e07ee2-03f7-4ab5-b177-25733583f35b",
+      "key": "CBD-KEY-CITESEQ-GEX-PSEUDOBULKS.tar.gz",
+      "size": 1436893747,
+      "checksum": "md5:795dcac7d34c52b3078b6950644b846f",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CITESEQ-GEX-PSEUDOBULKS.tar.gz/content"
+      }
+    },
+    {
+      "id": "5afa3dbf-3220-4dcd-8a6b-91d5ba676070",
+      "key": "CBD-KEY-CITESEQ-GEX-DIFFEXP.tar.gz",
+      "size": 1950145889,
+      "checksum": "md5:3d58a2d0d447dacac0bf73e2b1c086c3",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CITESEQ-GEX-DIFFEXP.tar.gz/content"
+      }
+    },
+    {
+      "id": "a648ea5f-7f54-4a55-a938-4f887faa8039",
+      "key": "CBD-KEY-CYTOF-WB.tar.gz",
+      "size": 912447899,
+      "checksum": "md5:0b5b6a38058edb9e8eb5155a6a9711ec",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CYTOF-WB.tar.gz/content"
+      }
+    },
+    {
+      "id": "2c482bda-df4d-42fe-af59-ca448b393a68",
+      "key": "CBD-KEY-CITESEQ-GEX-COMPOSITION.tar.gz",
+      "size": 212203,
+      "checksum": "md5:fe077fc9f314419536d6d901855c9d84",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CITESEQ-GEX-COMPOSITION.tar.gz/content"
+      }
+    },
+    {
+      "id": "c46aed8b-d03d-4b3d-9d39-26ea861cd3fe",
+      "key": "COMBAT-CITESeq-EXPRESSION-ATLAS.h5ad",
+      "size": 6561047697,
+      "checksum": "md5:ece5501a6b77f2c84a1747edbf6a170a",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/COMBAT-CITESeq-EXPRESSION-ATLAS.h5ad/content"
+      }
+    },
+    {
+      "id": "86ff42c0-ff42-4b43-87f4-476b407805eb",
+      "key": "CBD-KEY-REPERTOIRE-B.tar.gz",
+      "size": 55716,
+      "checksum": "md5:a36a531006a63ec2c3134304584e515f",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-REPERTOIRE-B.tar.gz/content"
+      }
+    },
+    {
+      "id": "e045da77-572f-4b40-b8be-baefa5615ca6",
+      "key": "CBD-KEY-CITESEQ-VDJ-B.tar.gz",
+      "size": 21715764,
+      "checksum": "md5:118f0cbd2109315c3b0f473aa0d8e5b8",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CITESEQ-VDJ-B.tar.gz/content"
+      }
+    },
+    {
+      "id": "f72a4e00-ca41-4abb-acb6-089bc821f306",
+      "key": "CBD-KEY-CITESEQ-ANNDATA.README.txt",
+      "size": 1393,
+      "checksum": "md5:0ace8e3f1803be1015256ca48a417c44",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-CITESEQ-ANNDATA.README.txt/content"
+      }
+    },
+    {
+      "id": "c1e5e29c-fc86-4488-a4ba-13a431f6eb3a",
+      "key": "CBD-KEY-REPERTOIRE-T.tar.gz",
+      "size": 23125,
+      "checksum": "md5:b171d69d0784d94c312bdc8bcfcf55c1",
+      "links": {
+        "self": "https://zenodo.org/api/records/5139561/files/CBD-KEY-REPERTOIRE-T.tar.gz/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "242287"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 15321,
+    "unique_downloads": 11111,
+    "views": 7251,
+    "unique_views": 6559,
+    "version_downloads": 3325,
+    "version_unique_downloads": 2847,
+    "version_unique_views": 1369,
+    "version_views": 1524
+  },
+  "state": "done",
+  "submitted": true
+}

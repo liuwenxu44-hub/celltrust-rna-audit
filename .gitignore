@@ -25,3 +25,7 @@ logs/
 *.ai
 *.pdf
 
+# Small source arrays needed to reproduce the published summaries.
+!source_data/bootstrap/*.npy
+!source_data/Figure5/B_full_empirical_cdf.npz
+

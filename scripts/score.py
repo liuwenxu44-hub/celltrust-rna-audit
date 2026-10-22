@@ -32,7 +32,9 @@ def validate_design(cells):
             raise ValueError("INVALID_INNER_FOLD_CODES")
         if (cells.loc[train].groupby("donor_id")[key].nunique() != 1).any():
             raise ValueError("DONOR_SPLIT_ACROSS_INNER_FOLDS")
-        if not cells.loc[~train, key].eq("OUTER_QUERY").all():
+        # The accepted D4 tables use OUTER_HOLDOUT; D3 uses OUTER_QUERY.
+        # Both are non-training sentinels, never new fold assignments.
+        if not cells.loc[~train, key].isin(["OUTER_QUERY", "OUTER_HOLDOUT"]).all():
             raise ValueError("OUTER_QUERY_INNER_CODE_CONFLICT")
         folds = sorted(inner.unique())
         if len(folds) < 2:
